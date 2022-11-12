@@ -1,0 +1,106 @@
+@use "common" as c;
+
+/* お問合せ */
+.contact_wrap {
+  position: relative;
+  .flex_wrap {
+    margin-bottom: 20px;
+    @media screen and (min-width: c.$w768) {
+      display: flex;
+      width: 100%;
+      max-width: 800px;
+      margin: auto;
+      margin-bottom: 20px;
+    }
+  }
+  .entry {
+    margin-bottom: 5px;
+    @media screen and (min-width: c.$w768) {
+      margin-bottom: 0;
+      width: 30%;
+      padding-right: 20px;
+    }
+  }
+  .entry + p {
+    @media screen and (min-width: c.$w768) {
+      width: 70%;
+    }
+  }
+  .entry + p input[type="text"],
+  .entry + p textarea {
+    border: 1px solid #c3c3c3;
+    width: 100%;
+    padding: 5px 10px;
+  }
+  .entry + p select {
+    border: 1px solid #c3c3c3;
+    padding: 5px 10px;
+  }
+  .submit_confirm {
+    border: 1px solid #c3c3c3;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 5px;
+    box-shadow: 2px 3px 0px rgba($color: #000000, $alpha: 0.06);
+  }
+}
+
+// 確認画面
+.confirm_wrap {
+  .flex_wrap {
+    margin-bottom: 20px;
+    @media screen and (min-width: c.$w768) {
+      display: flex;
+      width: 100%;
+      max-width: 800px;
+      margin: auto;
+      margin-bottom: 20px;
+    }
+  }
+  .entry {
+    margin-bottom: 5px;
+    @media screen and (min-width: c.$w768) {
+      margin-bottom: 0;
+      width: 30%;
+      padding-right: 20px;
+    }
+  }
+  .send_btn {
+    border: 1px solid #c3c3c3;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 5px;
+    box-shadow: 2px 3px 0px rgba($color: #000000, $alpha: 0.06);
+  }
+  .back_btn {
+    display: block;
+    margin: auto;
+  }
+}
+
+.required_text {
+  margin-left: 10px;
+  color: red;
+  font-size: 1.3rem;
+}
+
+.thanks_wrap {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 60px;
+  .top_btn {
+    display: block;
+    margin-top: 30px;
+    color: c.$main-color;
+  }
+}

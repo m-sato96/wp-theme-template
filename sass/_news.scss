@@ -1,0 +1,231 @@
+@use "common" as c;
+
+//パンくず
+.breadcrumb_trail_wrap {
+  margin-top: 20px;
+  display: flex;
+  width: 100px;
+  justify-content: space-between;
+}
+
+// 一覧ページ
+.news_wrap {
+  padding: 60px 0;
+}
+
+.news_list {
+  margin-bottom: 80px;
+}
+
+.news_items {
+  margin-bottom: 10px;
+  a {
+    display: block;
+    border-bottom: 1px solid #cecece;
+    padding-bottom: 10px;
+    @media screen and (min-width: c.$w768) {
+      display: flex;
+    }
+  }
+  time {
+    font-weight: 200;
+    @media screen and (min-width: c.$w768) {
+      width: 100px;
+    }
+  }
+  p {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    @media screen and (min-width: c.$w768) {
+      width: calc(100% - 100px);
+      padding-left: 30px;
+    }
+  }
+}
+
+//一覧のページネーション
+.nav-links {
+  text-align: center;
+  margin: 0 auto 80px;
+  .page-numbers {
+    display: inline;
+    padding: 3px 7px;
+    border: 1px solid c.$text-color;
+    margin: 0 1px;
+    border-radius: 5px;
+    line-height: 1;
+
+    @media screen and (min-width: 440px) {
+      padding: 5px 10px;
+      margin: 0 2px;
+    }
+
+    @media screen and (min-width: c.$w768) {
+      padding: 10px 15px;
+      margin: 0 5px;
+    }
+  }
+  .current {
+    background: c.$text-color;
+    color: c.$white;
+  }
+}
+
+//投稿詳細
+.single_wrap {
+  overflow-wrap: anywhere;
+}
+
+// // ページネーションがタイトルの場合
+// .wp-pagenavi {
+//   margin-top: 60px;
+//   text-align: center;
+//   a,
+//   span.current {
+//     font-size: 1.5rem;
+//     width: 40px;
+//     height: 40px;
+//     padding: 5px 15px !important;
+//     border: none;
+//   }
+//   span.current {
+//     color: c.$white;
+//     background: c.$main-color;
+//     border: none;
+//   }
+// }
+
+// .single_content {
+//   margin-bottom: 60px;
+//   .news_content {
+//     margin-bottom: 50px;
+//   }
+//   time {
+//     color: #989898;
+//     font-size: 1.5rem;
+//     @media screen and (min-width: c.$w768) {
+//       font-size: 1.8rem;
+//     }
+//   }
+//   p {
+//     font-size: 1.8rem;
+//   }
+//   .return_list_btn {
+//     text-align: center;
+//     padding: 10px 20px;
+//     display: block;
+//     width: 280px;
+//     margin: 60px auto 0;
+//     border: 1px solid #c6c6c6;
+//   }
+// }
+
+// .page_feed_wrap {
+//   display: flex;
+//   justify-content: space-between;
+//   width: 100%;
+//   max-width: 600px;
+//   margin: auto;
+//   .title_wrap {
+//     font-size: 1.4rem;
+//     color: c.$main-color;
+//     @media screen and (min-width: c.$w768) {
+//       font-size: 1.6rem;
+//     }
+//   }
+//   .next {
+//     margin-right: auto;
+//   }
+//   .prev {
+//     margin-left: auto;
+//   }
+// }
+
+// ページネーションが次への場合
+//投稿ページ
+.single_content {
+  .page_title {
+    border-left: 3px solid c.$main-color;
+    padding: 0 15px;
+    overflow-wrap: anywhere;
+  }
+
+  time {
+    text-align: end;
+    display: block;
+    font-size: 1.5rem;
+  }
+}
+
+//投稿ページのスタイル
+.single_inner {
+  h1 {
+    font-size: 2rem;
+    background: c.$main-color;
+    color: c.$white;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+  h2 {
+    font-size: 1.8rem;
+    color: c.$main-color;
+    border-bottom: 1px solid c.$main-color;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+  h3 {
+    border-bottom: 1px solid #cecece;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+  blockquote {
+    background: rgb(235 235 235);
+    padding: 10px;
+  }
+  a {
+    text-decoration: underline;
+    color: blue;
+  }
+  iframe,
+  img {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+  ol,
+  ul {
+    list-style: inherit;
+    padding-left: 20px;
+  }
+}
+
+//投稿ページページネーション
+.page_feed_wrap {
+  text-align: center;
+  margin: 80px auto;
+
+  a {
+    display: inline;
+    padding: 3px 7px;
+    border: 1px solid c.$text-color;
+    margin: 0 1px;
+    border-radius: 5px;
+    line-height: 1;
+
+    @media screen and (min-width: c.$w375) {
+      padding: 5px 10px;
+      margin: 0 2px;
+    }
+
+    @media screen and (min-width: c.$w768) {
+      padding: 10px 15px;
+      margin: 0 5px;
+    }
+  }
+
+  .list_link {
+    background: c.$text-color;
+    color: c.$white;
+  }
+}

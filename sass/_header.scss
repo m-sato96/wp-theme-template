@@ -1,0 +1,158 @@
+@use "common" as c;
+header {
+  background-color: white;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 3px rgba($color: #000000, $alpha: 0.06);
+  @media screen and (min-width: 960px) {
+    height: 70px;
+  }
+}
+
+.logo_wrap {
+  height: 100%;
+  a {
+    height: 50px;
+    display: block;
+    width: 80px;
+    text-align: center;
+    line-height: 50px;
+    @media screen and (min-width: 960px) {
+      width: 120px;
+      height: 70px;
+      line-height: 70px;
+    }
+  }
+}
+
+.header_nav_menu {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  transform: translateY(-100%);
+  background-color: #fff;
+  transition: transform ease 0.4s;
+  @media screen and (min-width: 960px) {
+    position: static;
+    transform: initial;
+    height: inherit;
+    display: flex;
+    justify-content: end;
+    width: 50%;
+  }
+  &.active {
+    transform: translateY(0);
+  }
+}
+
+.nav_menu_list {
+  padding: 100px 20px;
+  @media screen and (min-width: 960px) {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: initial;
+    justify-content: space-between;
+    padding: 0;
+  }
+}
+
+.nav_menu_item {
+  @media screen and (min-width: 960px) {
+    width: calc(100% / 5 - 20px);
+  }
+  a {
+    width: 100%;
+    display: block;
+    font-size: 15px;
+    border-bottom: 1px solid #c3c3c3;
+    padding: 20px 0;
+    @media screen and (min-width: 960px) {
+      text-align: center;
+      padding: 0;
+      border: none;
+    }
+  }
+}
+
+.header_contact_hamburger_wrap {
+  display: flex;
+  align-items: center;
+  @media screen and (min-width: 960px) {
+    display: none;
+  }
+}
+
+.header_contact_sp {
+  display: block;
+  height: 40px;
+  width: 100px;
+  text-align: center;
+  line-height: 40px;
+  background: #c3c3c3;
+  color: #fff;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+
+/* ハンバーガーメニュー */
+.header_hamburger {
+  width: 30px;
+  height: 100%;
+  background-color: transparent;
+  border-color: transparent;
+  z-index: 100;
+  span {
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+    position: relative;
+    transition: transform ease 0.4s;
+    display: block;
+    &:nth-child(2) {
+      margin: 8px 0;
+    }
+  }
+  //ハンバーガーメニュークリック後のスタイル
+  &.active {
+    span {
+      &:nth-child(1) {
+        top: 9px;
+        transform: rotate(45deg);
+      }
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        top: -9px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+/* 背景 */
+.background {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  z-index: 50;
+  background: rgba($color: #000000, $alpha: 0.6);
+  &.active {
+    display: block;
+  }
+}

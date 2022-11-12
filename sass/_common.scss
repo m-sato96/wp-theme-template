@@ -1,0 +1,98 @@
+$w375: 375px;
+$w425: 425px;
+$w768: 768px;
+$w1080: 1080px;
+
+$text-color: #111111;
+$white: #fff;
+$main-color: #3486c9;
+$main-bg: #fbfbfb;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Noto Sans JP", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+  color: $text-color;
+  line-height: 1.7;
+  background: $main-bg;
+  font-size: 1.5rem;
+  &.active {
+    position: relative;
+    &::after {
+      position: absolute;
+      top: 0;
+      display: block;
+      content: "";
+      height: 100%;
+      width: 100%;
+      background: #000;
+      opacity: 0.3;
+    }
+  }
+  @media screen and (min-width: $w768) {
+    font-size: 1.8rem;
+  }
+}
+
+.not_found_wrap {
+  width: 90%;
+  margin: 100px auto;
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  p {
+    color: rgb(122, 122, 122);
+    @media screen and (min-width: $w768) {
+      text-align: center;
+    }
+  }
+  span {
+    display: inline-block;
+    margin-left: 10px;
+  }
+}
+
+.max_width {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+// バックグラウンド記述例)
+// background: url(../imgs/manu-bg.jpg) no-repeat center / cover;
+
+//下記は説明トップページなので削除する
+
+main {
+  margin-top: 100px;
+}
+.sample {
+  width: 80%;
+  margin: 100px auto;
+  h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-size: 3rem;
+    color: #3486c9;
+    margin-bottom: 10px;
+  }
+  ol {
+    margin-bottom: 40px;
+    list-style: auto;
+    li {
+      margin-bottom: 10px;
+    }
+  }
+  .code {
+    color: rgb(0, 100, 67);
+    background: rgb(231, 231, 231);
+    padding: 3px 5px;
+  }
+}
