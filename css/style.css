@@ -84,7 +84,7 @@ main {
 }
 .sample .code {
   color: rgb(0, 100, 67);
-  background: rgb(231, 231, 231);
+  background: rgb(235, 235, 235);
   padding: 3px 5px;
 }
 
@@ -160,6 +160,7 @@ header {
         -ms-flex-pack: end;
             justify-content: end;
     width: 50%;
+    max-width: 550px;
   }
 }
 .header_nav_menu.active {
@@ -190,6 +191,7 @@ header {
 @media screen and (min-width: 960px) {
   .nav_menu_item {
     width: calc(20% - 20px);
+    background: rgb(190, 190, 190);
   }
 }
 .nav_menu_item a {
