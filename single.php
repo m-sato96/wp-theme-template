@@ -5,7 +5,7 @@
     while (have_posts()) : the_post();
   ?>
       <div>
-        <?php the_title('<h1>', '</h1>'); ?>
+        <?php the_title('<h1 class="single_h1_title max_width">', '</h1>'); ?>
         <div class="max_width">
           <div style="margin-bottom: 20px;">
             <?php

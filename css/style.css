@@ -191,7 +191,6 @@ header {
 @media screen and (min-width: 960px) {
   .nav_menu_item {
     width: calc(20% - 20px);
-    background: rgb(190, 190, 190);
   }
 }
 .nav_menu_item a {
@@ -298,6 +297,13 @@ header {
           justify-content: space-between;
 }
 
+#breadcrumbs {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+
 .news_wrap {
   padding: 60px 0;
 }
@@ -373,6 +379,18 @@ header {
 
 .single_wrap {
   overflow-wrap: anywhere;
+}
+
+.single_h1_title {
+  padding: 20px;
+  font-size: 2.4rem;
+  margin-bottom: 50px;
+}
+@media screen and (min-width: 768px) {
+  .single_h1_title {
+    font-size: 3rem;
+    margin-bottom: 50px;
+  }
 }
 
 .single_content .page_title {

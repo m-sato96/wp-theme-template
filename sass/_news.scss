@@ -7,6 +7,12 @@
   width: 100px;
   justify-content: space-between;
 }
+#breadcrumbs {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
 
 // 一覧ページ
 .news_wrap {
@@ -76,6 +82,16 @@
 //投稿詳細
 .single_wrap {
   overflow-wrap: anywhere;
+}
+
+.single_h1_title {
+  padding: 20px;
+  font-size: 2.4rem;
+  margin-bottom: 50px;
+  @media screen and (min-width: c.$w768) {
+    font-size: 3rem;
+    margin-bottom: 50px;
+  }
 }
 
 // // ページネーションがタイトルの場合
